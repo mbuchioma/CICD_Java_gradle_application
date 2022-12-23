@@ -3,7 +3,7 @@ pipeline{
 
     stages{
         stage('static code analysis'){
-            stage{
+            
                 agent{
                     docker{
                         image: "openjdk:11"
@@ -15,7 +15,7 @@ pipeline{
                             sh'./gradlew sonarqube'
                         }
 
-                }
+                 
             }
         }
     }
